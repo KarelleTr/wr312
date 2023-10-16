@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    @include reset;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/header-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 35%;
+    padding-top: 15%;
+    margin-left: 15%;
+    font-family: 'Playfair Display', serif;
+}
+
+.button {
+    background-color: white;
+    display: flex;
+    width: 164px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    color: #1E1E1E;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-left: 15%;
+    width: 35%;
+}
+
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    margin-left: 20%;
+
+    .about__image {
+        border-radius: 50%;
+        width: 100%;
+        max-width: 300px;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    }
+
+    .about__content {
+        text-align: left;
+        width: 20rem;
+    }
+}
+.about__content-right{
+    grid-template-columns: 1fr 1fr;
+    width: 20rem;
+}
+
+.about__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+}
+
+.about__text {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: initial;
+}
+
+.section__title--about {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 8%;
+    font-family: "Rubik", sans-serif;
+}
+
+.section__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-left: 35%;
+    font-family: "Rubik", sans-serif;
+}
+
+.industries {
+    background-color: #18302B;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .icon_p {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+
+        &--svg {
+            width: 6.25rem;
+            height: 6.25rem;
+            background-color: white;
+            border-radius: 50%;
+            padding: 1.875rem;
+            margin: 2.5rem;
+
+            &:hover {
+                animation: rotate 2s linear infinite;
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}
+
+.section-video {
+    background: url(assets/video.jpg);
+    background-size: cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    color: white;
+    width: 75%;
+    height: 604px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 85px auto;
+    border-radius: 20px;
+
+    .section-video__box {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(200, 200, 200, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 26px;
+        margin: 20px;
+    }
+
+    .section-video__video-play {
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .section-video__video__img {
+            border-radius: 12px;
+        }
+
+        .section-video__video__text {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .section-video__svg {
+                width: 20px;
+                height: 30px;
+            }
+
+            .section-video__text__watch {
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
